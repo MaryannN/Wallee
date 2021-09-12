@@ -18,11 +18,25 @@
     <div class="Wallee-content">
         <p>Make banking terms easier!</p>
         <div>
-          <form action= "~/data.py" method= "get">
+          <form class= "form-data">
             <label for="insert">Insert a term:</label><br>
             <input type="text" id="insert" name="insert"><br><br>
             <input type="submit" value="submit" id="submit"><br><br>
           </form>
+
+          <p id="test"></p>
+          <script>
+            let input = document.getElementById("insert").value;
+            let string;
+            if(input === "finance")
+            {
+              string = "money";
+            }
+            else{
+              string = "not found";
+            }
+            document.getElementById("test").innerHTML = string;
+          </script>
           <div>
             <a class= "botton" href="https://wallee.maryannn1.repl.co/" target="_blank">
                 <b>Visit Our Website</b>
@@ -31,7 +45,7 @@
         </div>
         
     </div>
-
+    <script src="bundle.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>
