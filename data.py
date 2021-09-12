@@ -1,5 +1,6 @@
+#!/usr/bin/python3
 #from http.server import BaseHTTPRequestHandler, HTTPServer
-import cgi
+
 import json
 import wikipedia ## download with 'pip install wikipedia' 
 
@@ -16,7 +17,7 @@ import wikipedia ## download with 'pip install wikipedia'
 #    server.serve_forever()
 
 form = cgi.FieldStorage()
-searchterm = "apple" #form.getvalue('insert')
+searchterm = form.getvalue('insert')
 print(searchterm)
 
 definition = wikipedia.summary(searchterm, sentences = 3, auto_suggest=False)
