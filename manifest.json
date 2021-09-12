@@ -8,5 +8,5 @@
         "default_icon": "/images/wallee_19.png",
         "default_popup": "popup.html"
     },
-    "permissions": ["activeTab"]
+    "permissions": ["activeTab", "<all_urls>"]
 }
